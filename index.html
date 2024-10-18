@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AggieServe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main Header Section -->
+    <header>
+        <nav>
+            <div class="logo">AggieServe</div>
+	    
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="contact.html">Contact</a></li>
+		
+		
+
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section. This is my welcoming button controls for the user to quickly jump to the page they need.-->
+    <section id="home" class="hero">
+        <h1 class="wave-text">Welcome to AggieServe</h1>
+        <p>Making an impact through service in Greensboro</p>
+        <a href="#events" class="cta-btn">View Upcoming Events</a>
+	<a href="history.html" class="cta-btn">Our History</a>
+	<a href="log.html" class="cta-btn">Log Hours</a>
+
+    </section>
+
+    <!-- Events Section. Where all event cards will be displayed. Users will be able to sign up directly by clicking the corresponding signup button that has a hover effect. The event card will have event details as well as a event description. Also want a more options toggle to keep the cards clean and organized -->
+    <section id="events" class="events">
+        <h2>Upcoming Events</h2>
+        <div class="event-list">
+<!-- Event 1 -->
+<div class="event-card event-card-1">
+    <h3>Community Cleanup</h3>
+    <p>Date: 20th October</p>
+    <p>Location: Dowdy Building</p>
+    <p>Hours: 2 hours</p>
+    <p>Dress Code: Athleisure</p>
+    <span class="desc-toggle" onclick="toggleDescription('desc-1')">More Details</span>
+    <p class="event-desc" id="desc-1" style="display:none;">Join us for a community cleanup event where we will focus on picking up trash and debris in and around the Dowdy Building. Make a difference and keep our campus clean!</p>
+    <button class="event-btn" onclick="location.href='signup.html?event=Community%20Cleanup&date=20th%20October&location=Dowdy%20Building'">Sign Up</button>
+</div>
+
+<!-- Event 2 -->
+<div class="event-card event-card-2">
+    <h3>Food Bank Volunteering</h3>
+    <p>Date: 23rd October</p>
+    <p>Location: Truist Stadium parking lot</p>
+    <p>Hours: 3 hours</p>
+    <p>Dress Code: Casual</p>
+    <span class="desc-toggle" onclick="toggleDescription('desc-2')">More Details</span>
+    <p class="event-desc" id="desc-2" style="display:none;">Help us sort and package food donations at the local food bank. Your efforts will provide meals for families in need!</p>
+    <button class="event-btn" onclick="location.href='signup.html?event=Food%20Bank%20Volunteering&date=23rd%20October&location=Truist%20Stadium%20Parking%20Lot'">Sign Up</button>
+</div>
+
+<!-- Event 3 -->
+<div class="event-card event-card-3">
+    <h3>Clock Tower Cleanup</h3>
+    <p>Date: 19th October</p>
+    <p>Location: Fyre Hall</p>
+    <p>Hours: 2 hours</p>
+    <p>Dress Code: Casual</p>
+    <span class="desc-toggle" onclick="toggleDescription('desc-3')">More Details</span>
+    <p class="event-desc" id="desc-3" style="display:none;">Join us for a cleanup event around the iconic clock tower. Bring gloves and wear comfortable shoes as we beautify our campus!</p>
+    <button class="event-btn" onclick="location.href='signup.html?event=Clock%20Tower%20Cleanup&date=19th%20October&location=Fyre%20Hall'">Sign Up</button>
+</div>
+
+<!-- Event 4 -->
+<div class="event-card event-card-4">
+    <h3>STEM Kids Middle School Visit</h3>
+    <p>Date: 30th October</p>
+    <p>Location: Smith Hall</p>
+    <p>Hours: 2 hours</p>
+    <p>Dress Code: Casual</p>
+    <span class="desc-toggle" onclick="toggleDescription('desc-4')">More Details</span>
+    <p class="event-desc" id="desc-4" style="display:none;">Volunteer to inspire middle school students about STEM fields. Activities include hands-on experiments and mentoring!</p>
+    <button class="event-btn" onclick="location.href='signup.html?event=STEM%20Kids%20Middle%20School%20Visit&date=30th%20October&location=Smith%20Hall'">Sign Up</button>
+</div>
+
+<!-- Event 5 -->
+<div class="event-card event-card-5">
+    <h3>Community Outreach</h3>
+    <p>Date: 25th October</p>
+    <p>Location: Downtown Greensboro</p>
+    <p>Hours: 3 hours</p>
+    <p>Dress Code: Casual</p>
+    <span class="desc-toggle" onclick="toggleDescription('desc-5')">More Details</span>
+    <p class="event-desc" id="desc-5" style="display:none;">Join us for a community outreach event where we will provide resources and support to local families in need.</p>
+    <button class="event-btn" onclick="location.href='signup.html?event=Community%20Outreach&date=25th%20October&location=Downtown%20Greensboro'">Sign Up</button>
+</div>
+
+            </div>
+    </section>
+
+    <!-- Footer Section. Consistent contact footer-->
+    <footer id="contact">
+        <p>Contact us at info@aggieserve.com</p>
+	<p>(336) 334-7500</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+<footer>
+		<a href="https://validator.w3.org/check?uri=referer"
+		referrerpolicy="unsafe-url"> Validate HTML </a> <br>
+
+		<a href="https://jigsaw.w3.org/css-validator/check/referer"
+		referrerpolicy="unsafe-url"> Validate CSS </a>
+</footer>
+</body>
+</html>

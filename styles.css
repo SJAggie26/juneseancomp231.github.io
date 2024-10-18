@@ -1,0 +1,451 @@
+
+/* General Reset ------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body -------------*/
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #121212; /* Dark background */
+    color: #f4f4f4; /* Light text */
+}
+
+
+
+/* Header -----------------------*/
+
+
+
+header {
+    background-color: #1c1c1c; /* Dark header background */
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f4f4f4; /* Light text for logo */
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #f4f4f4; /* Light text for nav links */
+    font-size: 16px;
+}
+
+/* Hero Section background image */
+.hero {
+    background: url('/Users/seanjune/Desktop/cst 231/Project AggieServe Pt2/images/ncatlog.png') no-repeat center center/cover;
+
+    text-align: center;
+    color:white; /* Light text for hero section */
+    padding: 300px 300px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+/* Wave Animation for Header Text. Used YouTube as well as other resources to complete. It adds more creativity in the website. May add some more nice effects to other areas. */
+@keyframes wave {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(5px) rotate(2deg); }
+    40% { transform: translateX(-5px) rotate(-2deg); }
+    60% { transform: translateX(5px) rotate(2deg); }
+    80% { transform: translateX(-5px) rotate(-2deg); }
+    100% { transform: translateX(0); }
+}
+
+.wave-text {
+    display: inline-block;
+    font-size: 50px;
+    margin-bottom: 20px;
+    animation: wave 2s infinite ease-in-out;
+    color: #f4f4f4; /* Light text for hero section */
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-btn:hover {
+    background-color: #000066; /* Dark blue hover effect */
+    color: #cce7ff; /* Light blue text on hover */
+}
+
+/* Header Section Navigation Hover Effect */
+header nav ul li a:hover {
+    color: #cce7ff; /* blue*/
+    background-color: 1c1c1c;
+}
+
+/* Event Section ---------------------*/
+.events {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.event-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Event Card --------------------------*/
+.event-card {
+    background-color: #1e1e1e; /* Dark background for event cards */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    margin: 15px;
+    padding: 20px;
+    width: 500px;
+    height: 550px; 
+    text-align: left;
+    border-radius: 8px;
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Push content to the bottom */
+    background-size: cover;  /* image covers the entire card */
+    background-position: center;  /* Center image */
+    background-repeat: no-repeat;
+}
+
+.history-section {
+    text-align: center; /* Center-aligns the text within the section */
+    padding: 20px; /* Adds some space around the section */
+}
+
+.history-section h1 {
+    font-size: 2.5em; /* Adjust the font size of the title if needed */
+    margin-bottom: 10px; /* Adds space between the title and paragraph */
+}
+
+.history-section p {
+    font-size: 1.2em; /* Adjust the font size of the paragraph */
+    margin-bottom: 20px; /* Adds space below the paragraph */
+}
+
+
+/* Home page Event Cards ---------------------*/
+.event-card {
+    position: relative; 
+    width: 500px;
+    height: 550px; 
+    border-radius: 8px;
+    overflow: hidden; /* Ensure no content overflows the card */
+    color: white; 
+    margin: 15px;
+}
+/* Event text images link */
+.event-card-1 {
+border: 2px solid white;
+    background-image: url('/Users/seanjune/Desktop/cst 231/Project AggieServe Pt2/images/comcleanup.jpg');
+}
+
+.event-card-2 {
+border: 2px solid white;
+    background-image: url('/Users/seanjune/Desktop/cst 231/Project AggieServe Pt2/images/FoodCommunity.jpeg');
+}
+
+.event-card-3 {
+border: 2px solid white;
+    background-image: url('/Users/seanjune/Desktop/cst 231/Project AggieServe Pt2/images/DeeseClockTower.jpg');
+}
+
+.event-card-4 {
+border: 2px solid white;
+    background-image: url('/Users/seanjune/Desktop/cst 231/Project AggieServe Pt2/images/stem2.jpg');
+}
+
+.event-card-5 {
+border: 2px solid white;
+    background-image: url('/Users/seanjune/Desktop/cst 231/Project AggieServe Pt2/images/Communityoutreach.jpg');
+}
+
+/* Event card text ----------------------*/
+.event-card h3, .event-card p {
+    
+    position: relative;
+    z-index: 2; /* Place content over the image */
+    padding: 15px; /* Add padding to the text for readability */
+    background-color: rgba(0, 0, 0, 0.5); /* Add a transparent background for better readability */
+    border-radius: 8px;
+}
+
+/* Button styles within event card ---------------*/
+.event-btn {
+    background-color: #white;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    position: relative;
+    z-index: 2; /* Keep button above the image */
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #1c1c1c; /* Dark footer background */
+    color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Button styles -------------------*/
+.event-btn {
+    background-color: #4169E1;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.desc-toggle {
+    color: #add8e6; /* Color of the text */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    text-decoration: underline; 
+    display: inline-block; /* Keeps it inline */
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.desc-toggle:hover {
+    color: #000066; /* Dark blue on hover */
+}
+
+
+/* Event Description Box ---------------------------------------*/
+.event-desc {
+    background-color: #4169E1; /* Light background color for the description box */
+    color: white; /* Dark text color */
+    padding: 15px; /* Padding inside the description box */
+    border-radius: 5px; /* Rounded corners */
+    display: none; /* Hidden by default */
+    margin-top: 10px; /* Space between button and description box */
+    font-size: 14px; /* Font size for description */
+}
+
+/* Mission Text Style -------------------------------------*/
+.mission-text {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin: 50px 0;
+    color: white; /* Light text color */
+}
+
+/* Contact Info Style -------------------------------------*/
+.contact-info {
+    text-align: center;
+    margin: 30px 0;
+    color: grey
+}
+
+.contact-info p {
+    font-size: 1.2em;
+    color: grey;
+}
+
+.contact-info h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: 007bff; /* Highlight color for heading */
+}
+
+/* Log Hours Section style. white rectangle card black text. Aligned to the left ---------------------*/
+.log-hours-section {
+    background-color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 50px auto;
+    width: 80%;
+    max-width: 700px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.log-hours-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.log-hours-section p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.log-hours-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.log-hours-form label {
+    display: block;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.log-hours-form input,
+.log-hours-form select,
+.log-hours-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.log-hours-form textarea {
+    resize: vertical;
+}
+
+.log-hours-form button {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    width: 100%;
+}
+
+.log-hours-form button:hover {
+    background-color: #1c7dcc;
+}
+
+/* Signup Section -----------------------------------*/
+.signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height */
+    background-color: black; /* Light gray background */
+}
+
+.signup-card {
+    background-color: white; /* White card background */
+    border: 2px solid black; /* Blue border */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 500px; /* Increased card width */
+    text-align: left;
+}
+
+.signup-card h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: black; /* Darker black text */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: black; /* Darker black text */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submit-btn {
+    background-color: #007bff; /* Blue button */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.submit-btn {
+    background-color: #007bff; /* Blue button */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+/* Footer Styling -------------------------------*/
+footer a {
+    color: grey; /* Set footer link color to grey */
+    text-decoration: none; /* Remove underline from links */
+}
+footer {
+    background-color: #1c1c1c;
+    padding: 20px;
+    text-align: center;
+    color: grey;
+}
+
+
+.event-btn:hover {
+    background-color: #000066;
+}

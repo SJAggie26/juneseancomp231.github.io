@@ -1,0 +1,65 @@
+* {
+    color: grey; /* Inherit default color unless specified */
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110vh; /* Full height */
+    background-color: black; /* Black background */
+}
+
+.profile-card {
+    background-color: white; /* Light card background */
+    border: 2px solid white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 600px; /* Card width */
+    text-align: center;
+}
+
+.profile-card h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: grey; /* Set h2 text color to grey */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: grey; /* Set label text color to grey */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: grey; /* Set input text color to grey */
+}
+
+.submit-btn {
+    background-color: #007bff; /* Blue button */
+    color: white; /* Keep button text white */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

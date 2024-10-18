@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Hours - AggieServe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">AggieServe</div>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#events">Events</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Log Hours Section where user will select the attended event and fill how many hours he or she volunteered. with a submit button at the end of form. the footer and header also has the consistent information eg validation links. User will also be able to add comments about the event so when we add the event to our history their personal experience will be added to the website as well.-->
+    <section id="log-hours" class="log-hours-section">
+        <h2 class="wave-text">Log Your Volunteer Hours</h2>
+        <p>We’re excited to see the difference you're making! Log your hours below:</p><br>
+	<p> Aggie Pride!<p>
+<!-- selection menu for the event worked-->
+        <div class="log-hours-form">
+            <form action="/submit-hours" method="POST">
+                <label for="event">Event Name:</label>
+                <select id="event" name="event" required>
+		    <option value="" disabled selected>Select an option</option>
+                    <option value="Community Cleanup">Community Cleanup</option>
+                    <option value="Food Bank Volunteering">Food Bank Volunteering</option>
+                    <option value="Clock Tower Cleanup">Clock Tower Cleanup</option>
+                    <option value="STEM Kids Middle School Visit">STEM Kids Middle School Visit</option>
+                    <option value="Community Outreach">Community Outreach</option>
+                </select>
+
+                <label for="date">Event Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="hours">Number of Hours Volunteered:</label>
+                <input type="number" id="hours" name="hours" min="1" max="24" required>
+
+                <label for="comments">Comments (optional):</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Share your experience!"></textarea>
+
+                <button type="submit" class="cta-btn">Submit Hours</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Contact us at info@aggieserve.com</p>
+	<p>(336) 334-7500</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+<footer>
+		<a href="https://validator.w3.org/check?uri=referer"
+		referrerpolicy="unsafe-url"> Validate HTML </a> <br>
+
+		<a href="https://jigsaw.w3.org/css-validator/check/referer"
+		referrerpolicy="unsafe-url"> Validate CSS </a>
+</footer>
+
+</body>
+</html>

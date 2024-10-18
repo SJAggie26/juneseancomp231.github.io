@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AggieServe - Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">AggieServe</div>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#events">Events</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="contact.html">Contact</a></li>
+		<li><a href="log.html">Log</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Profile Section where the user will enter in their information to create a user profile. Name, age, race, class and other necessary information-->
+    <section class="profile">
+        <div class="profile-card">
+            <h2>Create Your Profile <span id="event-name"></span></h2>
+      
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="birthday">Birthday:</label>
+                    <input type="date" id="birthday" required>
+                </div>
+                <div class="form-group">
+                    <label for="classification">Classification:</label>
+                    <input type="text" id="classification" placeholder="e.x. Freshman, Sophomore" required>
+                </div>
+                <div class="form-group">
+                    <label for="major">Major:</label>
+                    <input type="text" id="major" placeholder="Enter your major" required>
+                </div>
+                <div class="form-group">
+                    <label for="race">Race:</label>
+                    <input type="text" id="race" placeholder="Enter your race" required>
+                </div>
+                <div class="form-group">
+                    <label for="banner-id">Last Four of Banner ID:</label>
+                    <input type="text" id="banner-id" placeholder="Last four digits" required maxlength="4">
+                </div>
+                <div class="form-group">
+                    <label for="email">@aggies.ncat Email:</label>
+                    <input type="email" id="email" placeholder="Enter your @aggies.ncat email" required>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact">
+        <p>Contact us at info@aggieserve.com</p>
+	<p>(336) 334-7500</p>
+    </footer>
+
+    <script>
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const eventName = urlParams.get('event');
+        const eventDate = urlParams.get('date');
+        const eventLocation = urlParams.get('location');
+
+        // Set event name and details in the page
+        document.getElementById('event-name').textContent = eventName;
+        document.getElementById('event-details').textContent = `Date: ${eventDate}, Location: ${eventLocation}`;
+    </script>
+<footer>
+		<a href="https://validator.w3.org/check?uri=referer"
+		referrerpolicy="unsafe-url"> Validate HTML </a> <br>
+
+		<a href="https://jigsaw.w3.org/css-validator/check/referer"
+		referrerpolicy="unsafe-url"> Validate CSS </a>
+</footer>
+</body>
+</html>
